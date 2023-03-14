@@ -1,17 +1,26 @@
-import liMap from './assets/2560px-Blank_Map_of_Long_Island.svg.png'
-import mark from './assets/rec.png'
+import liMap from './assets/limap.svg'
+import mark from './assets/mark_icon.svg'
+import Props from 'react'
+
+type Props = {
+  location: "Arshamomaque Preserve" | "Downs Farm Preserve"
+  className: string
+}
 
 function App() {
-  function clickHandler() {
-
+  function MapMarker(props: Props) {
+    function clickHandler(location: Props["location"]) {
+      console.log("marker: " + location)
+    }
+    return (
+      <img src={mark} onClick={() => clickHandler(props.location)} className={props.className} />
+    )
   }
   return (
-    <div className="relative scale-[1] right-[50%] translate-y-[8rem]">
-      <img src={liMap} className="w-full h-auto" alt="Li Map" />
-      <a href="#" onClick={() => clickHandler()}>
-        <img src={mark} className="absolute scale-[0.8] top-[15%] left-[75%] h-8 w-8" alt="Arshamomaque Preserve" />
-        <img src={mark} className="absolute scale-[0.8] top-[28%] left-[70.5%] h-8 w-8" alt="Downs Farm Preserve" />
-      </a>
+    <div className="relative right-[40%] overflow-hidden">
+      <img src={liMap} className="w-screen h-auto" alt="Li Map" />
+      <MapMarker location="Arshamomaque Preserve" className="absolute top-[15%] left-[75%] w-[5%] h-[5%]" />
+      <MapMarker location="Downs Farm Preserve" className="absolute top-[28%] left-[70.5%] w-[5%] h-[5%]" />
     </div>
   )
 }
