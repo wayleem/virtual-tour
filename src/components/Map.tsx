@@ -22,7 +22,7 @@ function Map() {
         )
     }
     return (
-        <div className="relative z-20 right-[40%] overflow-hidden">
+        <div className="relative z-10 overflow-hidden">
             <img src={liMap} className="w-screen h-auto" alt="Li Map" />
             <MapMarker location={Arshamomaque_Preserve} className="absolute top-[17%] left-[73.5%] w-[5%] h-[5%]" />
             <MapMarker location={DownsFarm_Preserve} className="absolute top-[30%] left-[69%] w-[5%] h-[5%]" />
