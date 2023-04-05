@@ -1,11 +1,18 @@
-export default {
-  plugins: [],
+module.exports = {
+  mode: 'jit',
+  content: [
+    "./pages/**/*.{html,ts,tsx,js,jsx}",
+    "./src/**/*.{html,ts,tsx,js,jsx}",
+    "./components/**/*.{html,ts,tsx,js,jsx}",
+    "./index.html",
+  ],
   theme: {
-    extend: {},
+    extend:
+    {
+      fontFamily: {
+        'Jost': ['Jost', 'sans-serif']
+      },
+    },
   },
-  purge: ["./index.html", './src/**/*.{js, jsx, ts, tsx}'], // for unused CSS
-  variants: {
-    extend: {},
-  },
-  darkMode: false, // or 'media' or 'class'
+  plugins: [],
 }
