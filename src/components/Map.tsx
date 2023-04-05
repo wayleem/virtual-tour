@@ -1,5 +1,5 @@
-import liMap from '../assets/limap.svg'
-import mark from '../assets/mark_icon.svg'
+import liMap from '../assets/img/limap.svg'
+import mark from '../assets/img/mark_icon.svg'
 import Props from 'react'
 import { useDispatch } from 'react-redux'
 import { LocationContent, Arshamomaque_Preserve, DownsFarm_Preserve } from '../types'
@@ -14,7 +14,7 @@ function Map() {
     const dispatch = useDispatch()
     function MapMarker(props: Props) {
         function clickHandler(location: Props["location"]) {
-            console.log(location + " selected")
+            console.log(location.id + " selected")
             dispatch(action.setSelect(location))
         }
         return (

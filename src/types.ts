@@ -1,5 +1,5 @@
-import arshamomaque_cover from './assets/arshamomaque_cover.jpg'
-import downs_farm_cover from './assets/downs_farm_cover.jpg'
+import arshamomaque_cover from './assets/img/arshamomaque_cover.jpg'
+import downs_farm_cover from './assets/img/downs_farm_cover.jpg'
 
 export enum Location {
     Arshamomaque_Preserve = "Arshamomaque_Preserve",
@@ -21,13 +21,13 @@ export interface LocationContent {
 export const Arshamomaque_Preserve: LocationContent = {
     id: Location.Arshamomaque_Preserve,
     title: "Welcome to Arshamomaque Preserve",
-    body: "(bio placeholder for Arshamomaque Preserve)",
+    body: "placeholder",
     pic: arshamomaque_cover
 }
 
 export const DownsFarm_Preserve: LocationContent = {
     id: Location.DownsFarm_Preserve,
     title: "Welcome to Downs Farm Preserve",
-    body: "(bio placeholder for Downs Farm Preserve)",
+    body: "placeholder",
     pic: downs_farm_cover
 }
