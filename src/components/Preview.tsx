@@ -1,10 +1,10 @@
 import { useSelector, MapDispatchToProps } from 'react-redux'
 import { Location, PreviewState } from '../types'
-import { Panorama } from './VirtualTour'
+import { Panorama } from './Panorama'
 import { NavLink } from 'react-router-dom'
 
 function Preview() {
-    const select = useSelector((state: PreviewState) => state.select)
+    const select = useSelector((state: { previewReducer: PreviewState }) => state.previewReducer.select)
     return (
         <div className="absolute flex flex-col z-20 top-[10%] left-[5%] w-[30%] h-[80%] bg-stone-50">
             <h1 className="relative m-2 font-Jost font-normal text-xl">
