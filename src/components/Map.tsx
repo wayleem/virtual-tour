@@ -1,36 +1,39 @@
-import liMap from '../assets/img/limap.svg'
-import mark from '../assets/img/mark_icon.svg'
-import Props from 'react'
-import { useDispatch } from 'react-redux'
-import { LocationContent, Arshamomaque_Preserve, DownsFarm_Preserve } from '../types'
-import Preview from './Preview'
-import * as action from '../actions'
+import pin from "../assets/img/location-pin.png"
+import trailMap from "../assets/img/arshamomaque_trailmap.png"
+import Props from "react-redux"
+import { start, pond, obs_tower, vernal_pool } from "../data"
+import { Hotspot, VirtualTourState } from "../types"
+import { useDispatch, useSelector } from 'react-redux'
+import * as action from "../actions"
 
 type Props = {
-    location: LocationContent
-    className: string
+    hotspot: Hotspot
 }
 
 function Map() {
     const dispatch = useDispatch()
-    function MapMarker(props: Props) {
-        function clickHandler(location: Props["location"]) {
-            console.log(location.id + " selected")
-            dispatch(action.setSelect(location))
+    const mapActive = useSelector((state: { virtualTourReducer: VirtualTourState }) => state.virtualTourReducer.mapActive)
+    function Pin(props: Props) {
+        function clickHandler(hotspot: Props["hotspot"]) {
+            console.log(hotspot.name + " selected")
+            dispatch(action.setPanorama(hotspot.panoramaURL))
+            dispatch(action.toggleMap(!mapActive))
         }
         return (
-            <img src={mark} onClick={() => clickHandler(props.location)} className={props.className} />
+            <img src={pin} onClick={() => clickHandler(props.hotspot)} className={props.hotspot.location}></img>
         )
     }
     return (
-        <div className="relative w-screen h-screen">
-            <div className="relative z-10 overflow-hidden">
-                <img src={liMap} className="w-screen h-auto" alt="Li Map" />
-                <MapMarker location={Arshamomaque_Preserve} className="absolute top-[17%] left-[73.5%] w-[5%] h-[5%]" />
-                <MapMarker location={DownsFarm_Preserve} className="absolute top-[30%] left-[69%] w-[5%] h-[5%]" />
-            </div>
-            <Preview />
-        </div>
+        <>
+            {mapActive && (
+                <div className="absolute z-10 left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%]">
+                    <Pin hotspot={start} />
+                    <Pin hotspot={pond} />
+                    <Pin hotspot={vernal_pool} />
+                    <Pin hotspot={obs_tower} />
+                    <img src={trailMap} className="" />
+                </div>)}
+        </>
     )
 }
 

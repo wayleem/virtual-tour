@@ -1,29 +1,23 @@
-import { pannellum } from '../pannellum'
-import React, { useRef, useEffect } from 'react'
+import { Panorama } from "./Panorama"
+import map from "../assets/img/map_icon.png"
+import MapView from "./Map"
+import { useDispatch, useSelector } from "react-redux"
+import * as action from "../actions"
+import { VirtualTourState } from "../types"
 
-export const Panorama: React.FC = props => {
-    const { current: id } = useRef(
-        `panorama-$(Math.floor(Math.random() * (99999 - 10000 + 1)) + 10000}`
+function VirtualTour() {
+    const dispatch = useDispatch()
+    const mapActive = useSelector((state: { virtualTourReducer: VirtualTourState }) => state.virtualTourReducer.mapActive)
+    function clickHandler() {
+        dispatch(action.toggleMap(!mapActive))
+    }
+    return (
+        <div className="relative w-screen h-screen">
+            <MapView />
+            <img src={map} onClick={() => clickHandler()} className="absolute z-10 left-5 top-5 w-[5%]" />
+            <Panorama />
+        </div>
     )
-    const viewer = useRef<any>(null)
-
-    useEffect(() => {
-        viewer.current = pannellum.viewer(id, {
-            autoLoad: true,
-            panorama: "src/assets/panoramas/GS__0164_04-07-2023_19_38_42.jpeg",
-            dynamicUpdate: true,
-            compass: false,
-            friction: 0,
-            mouseZoom: false,
-            showZoomCtrl: false,
-            showFullscreenCtrl: false,
-            type: "equirectangular"
-        })
-
-        return () => {
-            viewer.current.destroy()
-
-        }
-    }, [id])
-    return <div className="relative w-screen h-screen" {...props} id={id} />
 }
+
+export default VirtualTour
