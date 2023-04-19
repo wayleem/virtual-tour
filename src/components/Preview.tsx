@@ -1,6 +1,5 @@
-import { useSelector, MapDispatchToProps } from 'react-redux'
-import { Location, PreviewState } from '../types'
-import { Panorama } from './Panorama'
+import { useSelector } from 'react-redux'
+import { PreviewState } from '../types'
 import { NavLink } from 'react-router-dom'
 
 function Preview() {
