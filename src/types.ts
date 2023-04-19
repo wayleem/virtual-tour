@@ -11,6 +11,7 @@ export interface VirtualTourState {
     panoramaURL: string
     mapActive: boolean
     hotspots: Hotspot[]
+    trailMap: any
 }
 
 export interface LocationContent {
@@ -19,6 +20,7 @@ export interface LocationContent {
     body: string
     pic: string
     location: string
+    trailMap: any
 }
 
 export interface Panorama {

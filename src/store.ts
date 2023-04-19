@@ -1,16 +1,17 @@
 import { configureStore, createReducer, combineReducers } from '@reduxjs/toolkit'
 import { PreviewState, VirtualTourState } from './types'
-import { start } from './data'
+import { start, Arshamomaque_Preserve } from './data'
 import * as action from './actions'
 
 const INITIAL_PREVIEW: PreviewState = {
-    select: undefined
+    select: Arshamomaque_Preserve
 }
 
 const INITIAL_VIRTUAL_TOUR: VirtualTourState = {
     mapActive: false,
     panoramaURL: start.panoramaURL,
-    hotspots: start.hotspots
+    hotspots: start.hotspots,
+
 }
 
 const previewReducer = createReducer(INITIAL_PREVIEW, (builder) => {
