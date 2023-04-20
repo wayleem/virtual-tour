@@ -1,6 +1,6 @@
 import pin from "../assets/img/location-pin.png"
 import Props from "react-redux"
-import { start, pond, obs_tower, vernal_pool, Arshamomaque_Preserve, DownsFarm_Preserve } from "../data"
+import { start, pond, obs_tower, vernal_pool, obs_tower2, meadow, forest, Arshamomaque_Preserve, DownsFarm_Preserve } from "../data"
 import { Panorama, VirtualTourState, PreviewState } from "../types"
 import { useDispatch, useSelector } from 'react-redux'
 import * as action from "../actions"
@@ -14,9 +14,7 @@ type Props = {
 function Map() {
     const dispatch = useDispatch()
     const mapActive = useSelector((state: { virtualTourReducer: VirtualTourState }) => state.virtualTourReducer.mapActive)
-    const trailMap = useSelector((state: { virtualTourReducer: VirtualTourState }) => state.virtualTourReducer.trailMap)
     const select = useSelector((state: { previewReducer: PreviewState }) => state.previewReducer.select)
-    console.log(trailMap)
     console.log(select.id + " is selected")
     function Pin(props: Props) {
         function clickHandler(panorama: Props["panorama"]) {
@@ -37,14 +35,13 @@ function Map() {
                     <Pin panorama={pond} />
                     <Pin panorama={vernal_pool} />
                     <Pin panorama={obs_tower} />
+                    <Pin panorama={obs_tower2} />
                     <img src={arshamomaque_trailmap} className="object-fill" />
                 </div>)}
             {mapActive && select === DownsFarm_Preserve && (
                 <div className="absolute z-10 left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] w-[50%]">
-                    <Pin panorama={start} />
-                    <Pin panorama={pond} />
-                    <Pin panorama={vernal_pool} />
-                    <Pin panorama={obs_tower} />
+                    <Pin panorama={meadow} />
+                    <Pin panorama={forest} />
                     <img src={downs_farm_trailmap} className="object-fill" />
                 </div>)}
         </>
