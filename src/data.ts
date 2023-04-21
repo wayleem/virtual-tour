@@ -75,7 +75,7 @@ export const obs_tower2: Panorama = {
             text: 'text'
         }
     ],
-    location: "absolute z-20 w-[3%]"
+    location: "absolute z-20 left-[42%] top-[47%] w-[3%]"
 }
 
 export const forest: Panorama = {
@@ -89,7 +89,7 @@ export const forest: Panorama = {
             text: 'text'
         }
     ],
-    location: "absolute z-20 w-[3%]"
+    location: "absolute z-20 left-[37%] top-[52%] w-[3%]"
 }
 
 export const meadow: Panorama = {
@@ -103,7 +103,7 @@ export const meadow: Panorama = {
             text: 'text'
         }
     ],
-    location: "absolute z-20 w-[3%]"
+    location: "absolute z-20 left-[13%] top-[56%] w-[3%]"
 }
 
 export const Arshamomaque_Preserve: LocationContent = {
