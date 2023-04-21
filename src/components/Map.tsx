@@ -35,13 +35,13 @@ function Map() {
                     <Pin panorama={pond} />
                     <Pin panorama={vernal_pool} />
                     <Pin panorama={obs_tower} />
-                    <Pin panorama={obs_tower2} />
                     <img src={arshamomaque_trailmap} className="object-fill" />
                 </div>)}
             {mapActive && select === DownsFarm_Preserve && (
                 <div className="absolute z-10 left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] w-[50%]">
                     <Pin panorama={meadow} />
                     <Pin panorama={forest} />
+                    <Pin panorama={obs_tower2} />
                     <img src={downs_farm_trailmap} className="object-fill" />
                 </div>)}
         </>
