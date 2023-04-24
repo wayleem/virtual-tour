@@ -126,6 +126,7 @@ export const Arshamomaque_Preserve: LocationContent = {
     body: "placeholder",
     pic: arshamomaque_cover,
     location: "absolute top-[17%] left-[73.5%] w-[5%] h-[5%]",
+    start: start
 }
 
 export const DownsFarm_Preserve: LocationContent = {
@@ -134,4 +135,5 @@ export const DownsFarm_Preserve: LocationContent = {
     body: "placeholder",
     pic: downs_farm_cover,
     location: "absolute top-[30%] left-[69%] w-[5%] h-[5%]",
+    start: meadow
 }

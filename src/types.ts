@@ -20,6 +20,7 @@ export interface LocationContent {
     body: string
     pic: string
     location: string
+    start: Panorama
 }
 
 export interface Panorama {

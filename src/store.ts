@@ -4,7 +4,7 @@ import { start, Arshamomaque_Preserve } from './data'
 import * as action from './actions'
 
 const INITIAL_PREVIEW: PreviewState = {
-    select: Arshamomaque_Preserve
+    select: undefined
 }
 
 const INITIAL_VIRTUAL_TOUR: VirtualTourState = {

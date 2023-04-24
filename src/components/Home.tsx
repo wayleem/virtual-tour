@@ -3,7 +3,7 @@ import mark from '../assets/img/mark_icon.svg'
 import Props from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { LocationContent } from '../types'
-import { Arshamomaque_Preserve, DownsFarm_Preserve } from '../data'
+import { Arshamomaque_Preserve, DownsFarm_Preserve, start, meadow } from '../data'
 import Preview from './Preview'
 import * as action from '../actions'
 
@@ -18,6 +18,7 @@ function Home() {
         function clickHandler(location: Props["location"]) {
             console.log(location.id + " selected")
             dispatch(action.setSelect(location))
+            dispatch(action.setPanorama(location.start.config))
         }
         return (
             <img src={mark} onClick={() => clickHandler(props.location)} className={props.className} />
