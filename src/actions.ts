@@ -1,9 +1,9 @@
 import { createAction } from '@reduxjs/toolkit'
-import { LocationContent, Hotspot } from './types'
+import { LocationContent, Hotspot, Config } from './types'
 
 export const setSelect = createAction<LocationContent>("SET_SELECT")
 
-export const setPanorama = createAction<string>("SET_PANORAMA")
+export const setPanorama = createAction<Config>("SET_PANORAMA")
 
 export const setHotspot = createAction<Hotspot[]>("SET_HOTSPOT")
 

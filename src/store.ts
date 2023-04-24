@@ -10,7 +10,7 @@ const INITIAL_PREVIEW: PreviewState = {
 const INITIAL_VIRTUAL_TOUR: VirtualTourState = {
     mapActive: false,
     panoramaURL: start.panoramaURL,
-    hotspots: start.hotspots,
+    config: start.config
 
 }
 
@@ -24,13 +24,10 @@ const previewReducer = createReducer(INITIAL_PREVIEW, (builder) => {
 const virtualTourReducer = createReducer(INITIAL_VIRTUAL_TOUR, (builder) => {
     builder
         .addCase(action.setPanorama, (state, action) => {
-            state.panoramaURL = action.payload
+            state.config = action.payload
         })
         .addCase(action.toggleMap, (state, action) => {
             state.mapActive = action.payload
-        })
-        .addCase(action.setHotspot, (state, action) => {
-            state.hotspots = action.payload
         })
 })
 

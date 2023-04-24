@@ -1,3 +1,5 @@
+import { pannellum } from './pannellum'
+
 export enum Location {
     Arshamomaque_Preserve = "Arshamomaque_Preserve",
     DownsFarm_Preserve = "DownsFarm_Preserve"
@@ -10,8 +12,7 @@ export interface PreviewState {
 export interface VirtualTourState {
     panoramaURL: string
     mapActive: boolean
-    hotspots: Hotspot[]
-    trailMap: any
+    config: Config
 }
 
 export interface LocationContent {
@@ -20,14 +21,13 @@ export interface LocationContent {
     body: string
     pic: string
     location: string
-    trailMap: any
 }
 
 export interface Panorama {
     name: string
     panoramaURL: string
-    hotspots: Hotspot[]
     location: string
+    config: Config
 }
 
 export interface Hotspot {
@@ -36,3 +36,22 @@ export interface Hotspot {
     type: string,
     text: string
 }
+
+export interface Config {
+    autoLoad: boolean
+    panorama: string
+    dynamicUpdate: boolean
+    compass: boolean
+    friction: number
+    mouseZoom: boolean
+    showZoomCtrl: boolean
+    showFullscreenCtrl: boolean
+    type: string
+    hotSpots: {
+        pitch: number,
+        yaw: number,
+        type: string,
+        text: string
+    }[]
+}
+

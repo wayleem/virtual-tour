@@ -15,13 +15,12 @@ function Map() {
     const dispatch = useDispatch()
     const mapActive = useSelector((state: { virtualTourReducer: VirtualTourState }) => state.virtualTourReducer.mapActive)
     const select = useSelector((state: { previewReducer: PreviewState }) => state.previewReducer.select)
-    console.log(select.id + " is selected")
     function Pin(props: Props) {
         function clickHandler(panorama: Props["panorama"]) {
             console.log(panorama.name + " selected")
-            dispatch(action.setPanorama(panorama.panoramaURL))
-            dispatch(action.setHotspot(panorama.hotspots))
+            dispatch(action.setPanorama(panorama.config))
             dispatch(action.toggleMap(!mapActive))
+            console.log(panorama.config)
         }
         return (
             <img src={pin} onClick={() => clickHandler(props.panorama)} className={props.panorama.location}></img>
