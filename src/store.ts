@@ -9,7 +9,6 @@ const INITIAL_PREVIEW: PreviewState = {
 
 const INITIAL_VIRTUAL_TOUR: VirtualTourState = {
     mapActive: false,
-    panoramaURL: start.panoramaURL,
     config: start.config
 
 }

@@ -36,15 +36,7 @@ export interface Hotspot {
 }
 
 export interface Config {
-    autoLoad: boolean
     panorama: string
-    dynamicUpdate: boolean
-    compass: boolean
-    friction: number
-    mouseZoom: boolean
-    showZoomCtrl: boolean
-    showFullscreenCtrl: boolean
-    type: string
     hotSpots: Hotspot[]
 }
 
