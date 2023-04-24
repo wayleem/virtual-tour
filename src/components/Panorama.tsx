@@ -12,7 +12,8 @@ export const Panorama: React.FC = () => {
     )
     const viewer = useRef<any>(null)
 
-    const hotSpots = JSON.parse(JSON.stringify(config.hotSpots))
+    const copy = (a: Array<object>) => a.map((aa) => Object.assign({}, aa))
+    const hotSpots = copy(config.hotSpots)
 
     const configObject = {
         autoLoad: true,
