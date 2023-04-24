@@ -1,7 +1,7 @@
 import { pannellum } from '../pannellum'
 import React, { useRef, useEffect } from 'react'
 import { useSelector } from 'react-redux'
-import { VirtualTourState, Config } from '../types'
+import { VirtualTourState, Config, Hotspot } from '../types'
 
 
 
@@ -13,16 +13,9 @@ export const Panorama: React.FC = () => {
     )
     const viewer = useRef<any>(null)
 
-    const hotspot_test = [{
-        pitch: 0,
-        yaw: 100,
-        type: 'info',
-        text: 'test',
-    }]
+    const hotSpots = JSON.parse(JSON.stringify(config.hotSpots))
 
-    const hotSpots2 = [...config.hotSpots, hotspot_test]
-
-    const configObject = {
+    const configObject: Config = {
         autoLoad: true,
         panorama: config.panorama,
         dynamicUpdate: true,
@@ -33,18 +26,16 @@ export const Panorama: React.FC = () => {
         showFullscreenCtrl: false,
         type: 'equirectangular',
         hotSpots:
-            hotSpots2
+            hotSpots
 
     }
-
-
 
     useEffect(() => {
         viewer.current = pannellum.viewer(id, configObject)
         return () => {
             viewer.current.destroy()
         }
-    }, [id, panoramaURL, config])
+    }, [id, config.panorama])
 
     return <div className="relative w-screen h-screen z-0" id={id} />
 }

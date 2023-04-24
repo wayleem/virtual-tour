@@ -10,7 +10,6 @@ export interface PreviewState {
 }
 
 export interface VirtualTourState {
-    panoramaURL: string
     mapActive: boolean
     config: Config
 }
@@ -25,7 +24,6 @@ export interface LocationContent {
 
 export interface Panorama {
     name: string
-    panoramaURL: string
     location: string
     config: Config
 }
@@ -47,11 +45,6 @@ export interface Config {
     showZoomCtrl: boolean
     showFullscreenCtrl: boolean
     type: string
-    hotSpots: {
-        pitch: number,
-        yaw: number,
-        type: string,
-        text: string
-    }[]
+    hotSpots: Hotspot[]
 }
 

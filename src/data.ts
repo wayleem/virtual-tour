@@ -4,11 +4,10 @@ import { Panorama, Location, LocationContent } from './types'
 
 export const start: Panorama = {
     name: "start",
-    panoramaURL: "src/assets/panoramas/GS__0164_04-07-2023_19_38_42.jpeg",
     location: "absolute z-20 left-[49%] top-[34%] w-[3%]",
     config: {
         autoLoad: true,
-        panorama: "src/assets/panoramas/GS__0165_04-07-2023_19_36_21.jpeg",
+        panorama: "src/assets/panoramas/GS__0164_04-07-2023_19_38_42.jpeg",
         dynamicUpdate: true,
         compass: false,
         friction: 0,
@@ -35,7 +34,6 @@ export const start: Panorama = {
 
 export const pond: Panorama = {
     name: "pond",
-    panoramaURL: "src/assets/panoramas/GS__0165_04-07-2023_19_36_21.jpeg",
     location: "absolute z-20 left-[25%] top-[53%] w-[3%]",
     config: {
         autoLoad: true,
@@ -60,11 +58,10 @@ export const pond: Panorama = {
 
 export const obs_tower: Panorama = {
     name: "observation tower",
-    panoramaURL: "src/assets/panoramas/GS__0166_04-07-2023_19_35_32.jpeg",
     location: "absolute z-20 left-[39%] top-[89%] w-[3%]",
     config: {
         autoLoad: true,
-        panorama: "src/assets/panoramas/GS__0165_04-07-2023_19_36_21.jpeg",
+        panorama: "src/assets/panoramas/GS__0166_04-07-2023_19_35_32.jpeg",
         dynamicUpdate: true,
         compass: false,
         friction: 0,
@@ -85,11 +82,10 @@ export const obs_tower: Panorama = {
 
 export const vernal_pool: Panorama = {
     name: "vernal pools",
-    panoramaURL: "src/assets/panoramas/GS__0167_04-07-2023_19_34_37.jpeg",
     location: "absolute z-20 left-[35%] top-[54%] w-[3%]",
     config: {
         autoLoad: true,
-        panorama: "src/assets/panoramas/GS__0165_04-07-2023_19_36_21.jpeg",
+        panorama: "src/assets/panoramas/GS__0167_04-07-2023_19_34_37.jpeg",
         dynamicUpdate: true,
         compass: false,
         friction: 0,
@@ -110,11 +106,10 @@ export const vernal_pool: Panorama = {
 
 export const obs_tower2: Panorama = {
     name: "observation tower 2",
-    panoramaURL: "src/assets/panoramas/GS__0168_04-07-2023_19_33_52.jpeg",
     location: "absolute z-20 left-[42%] top-[47%] w-[3%]",
     config: {
         autoLoad: true,
-        panorama: "src/assets/panoramas/GS__0165_04-07-2023_19_36_21.jpeg",
+        panorama: "src/assets/panoramas/GS__0168_04-07-2023_19_33_52.jpeg",
         dynamicUpdate: true,
         compass: false,
         friction: 0,
@@ -135,11 +130,10 @@ export const obs_tower2: Panorama = {
 
 export const forest: Panorama = {
     name: "forest",
-    panoramaURL: "src/assets/panoramas/GS__0171_04-07-2023_19_31_31.jpeg",
     location: "absolute z-20 left-[37%] top-[52%] w-[3%]",
     config: {
         autoLoad: true,
-        panorama: "src/assets/panoramas/GS__0165_04-07-2023_19_36_21.jpeg",
+        panorama: "src/assets/panoramas/GS__0171_04-07-2023_19_31_31.jpeg",
         dynamicUpdate: true,
         compass: false,
         friction: 0,
@@ -160,11 +154,10 @@ export const forest: Panorama = {
 
 export const meadow: Panorama = {
     name: "meadow",
-    panoramaURL: "src/assets/panoramas/GS__0169_04-07-2023_19_32_57.jpeg",
     location: "absolute z-20 left-[13%] top-[56%] w-[3%]",
     config: {
         autoLoad: true,
-        panorama: "src/assets/panoramas/GS__0165_04-07-2023_19_36_21.jpeg",
+        panorama: "src/assets/panoramas/GS__0169_04-07-2023_19_32_57.jpeg",
         dynamicUpdate: true,
         compass: false,
         friction: 0,
