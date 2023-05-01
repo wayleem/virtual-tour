@@ -3,7 +3,7 @@ import mark from '../assets/img/mark_icon.svg'
 import Props from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { LocationContent } from '../types'
-import { Arshamomaque_Preserve, DownsFarm_Preserve, start, meadow } from '../data'
+import { Arshamomaque_Preserve, DownsFarm_Preserve } from '../data'
 import Preview from './Preview'
 import * as action from '../actions'
 

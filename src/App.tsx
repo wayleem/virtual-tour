@@ -10,7 +10,7 @@ function App() {
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          <Route index element={<Home />} />
+          <Route path='/' index element={<Home />} />
           <Route path='/virtualtour' element={<VirtualTour />} />
         </Routes>
       </BrowserRouter>

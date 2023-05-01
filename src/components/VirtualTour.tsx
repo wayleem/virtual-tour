@@ -1,9 +1,11 @@
 import { Panorama } from "./Panorama"
 import map from "../assets/img/map_icon.png"
+import home from "../assets/img/home_icon.svg"
 import MapView from "./Map"
 import { useDispatch, useSelector } from "react-redux"
 import * as action from "../actions"
 import { VirtualTourState } from "../types"
+import { NavLink } from "react-router-dom"
 
 function VirtualTour() {
     const dispatch = useDispatch()
@@ -14,7 +16,10 @@ function VirtualTour() {
     return (
         <div className="relative w-screen h-screen">
             <MapView />
-            <img src={map} onClick={() => clickHandler()} className="absolute z-10 left-5 top-5 w-[5%]" />
+            <img src={map} onClick={() => clickHandler()} className="absolute z-10 left-[2%] top-[2%] w-[3%]" />
+            <NavLink to="/" onClick={() => { dispatch(action.setSelect(undefined)) }}>
+                <img src={home} className="absolute z-10 left-[6%] top-[1%] w-[3.5%]" />
+            </NavLink>
             <Panorama />
         </div>
     )
