@@ -8,3 +8,11 @@
     font-family: 'Jost';
     src: url('./assets/fonts/Jost-VariableFont_wght.ttf') format('ttf');
 }
+
+body {
+    height: 100%;
+}
+
+html {
+    font-size: 38px;
+}

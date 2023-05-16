@@ -7,6 +7,16 @@ module.exports = {
     "./index.html",
   ],
   theme: {
+    colors: {
+      primary: '#5da145', // green
+      secondary: '#002f6c', // dark blue
+      lblue: '#009ed1',
+      offwhite: '#f2f6f8',
+      sunset: '#f5a255',
+      graytint: '#655b5c',
+      green: '#81b738',
+      white: '#fff'
+    },
     extend:
     {
       fontFamily: {
