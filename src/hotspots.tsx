@@ -1,11 +1,11 @@
-import snake from "./assets/img/gartersnake.jpg"
-import osprey from "./assets/img/osprey.jpg"
-import ospreymp3 from "./assets/audio/osprey.mp3"
-import poolsign from "./assets/img/poolsign.jpeg"
-import blueheron from "./assets/img/blueheron.jpg"
-import blueheronmp3 from "./assets/audio/blueheron.mp3"
-import kingfisher from "./assets/img/kingfisher.jpg"
-import kingfishermp3 from "./assets/audio/kingfisher.mp3"
+import snake from "../public/assets/img/gartersnake.jpg"
+import osprey from "../public/assets/img/osprey.jpg"
+import ospreymp3 from "../public/assets/audio/osprey.mp3"
+import poolsign from "../public/assets/img/poolsign.jpeg"
+import blueheron from "../public/assets/img/blueheron.jpg"
+import blueheronmp3 from "../public/assets/audio/blueheron.mp3"
+import kingfisher from "../public/assets/img/kingfisher.jpg"
+import kingfishermp3 from "../public/assets/audio/kingfisher.mp3"
 
 export function start1(hotSpotDiv: HTMLElement): void {
   hotSpotDiv.classList.add('custom-hotspot')

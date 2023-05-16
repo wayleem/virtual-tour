@@ -32,7 +32,7 @@ function Preview(props: Props) {
   const select = useSelector((state: { previewReducer: PreviewState }) => state.previewReducer.select)
 
   const album = () => select?.album.map((a, idx) =>
-    <img key={idx + a} className="object-cover mb-1" src={`/src/assets/locations/${select?.id.replace('_Preserve', '')}/${a}`} />)
+    <img key={idx + a} className="object-cover mb-1" src={`/assets/locations/${select?.id.replace('_Preserve', '')}/${a}`} />)
 
   return (
     <AnimatePresence initial={false}>

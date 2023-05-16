@@ -1,4 +1,4 @@
-import liMap from '../assets/img/limap.svg'
+import liMap from '../../public/assets/img/limap.svg'
 import MapMarker from './MapMarker'
 import { Location } from '../types'
 import { motion, useAnimation, AnimatePresence } from 'framer-motion'

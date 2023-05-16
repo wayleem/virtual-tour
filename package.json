@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "clean": "rmdir /s /q dist",
+    "test": "npm run build && npx http-server dist",
     "preview": "vite preview"
   },
   "dependencies": {

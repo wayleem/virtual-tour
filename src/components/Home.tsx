@@ -1,4 +1,4 @@
-import logo from '../assets/img/logo.png'
+import logo from '../../public/assets/img/logo.png'
 import Preview from './Preview'
 import MapHome from './MapHome'
 import { PreviewState } from '../types'

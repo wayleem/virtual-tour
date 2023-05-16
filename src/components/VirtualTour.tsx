@@ -1,6 +1,6 @@
 import { Panorama } from "./Panorama"
-import map from "../assets/img/map_icon.png"
-import home from "../assets/img/home_icon.svg"
+import map from "../../public/assets/img/map_icon.png"
+import home from "../../public/assets/img/home_icon.svg"
 import MapView from "./Map"
 import { useDispatch, useSelector } from "react-redux"
 import * as action from "../actions"

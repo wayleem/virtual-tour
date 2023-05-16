@@ -1,11 +1,11 @@
-import pin from "../assets/img/location-pin.png"
+import pin from "../../public/assets/img/location-pin.png"
 import Props from "react-redux"
 import { start, pond, obs_tower, vernal_pool, obs_tower2, meadow, forest, Arshamomaque_Preserve, DownsFarm_Preserve } from "../data"
 import { Panorama, VirtualTourState, PreviewState } from "../types"
 import { useDispatch, useSelector } from 'react-redux'
 import * as action from "../actions"
-import arshamomaque_trailmap from '../assets/img/arshamomaque_trailmap.png'
-import downs_farm_trailmap from '../assets/img/downs_farm_trailmap.png'
+import arshamomaque_trailmap from '../../public/assets/img/arshamomaque_trailmap.png'
+import downs_farm_trailmap from '../../public/assets/img/downs_farm_trailmap.png'
 
 type Props = {
     panorama: Panorama
