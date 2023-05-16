@@ -7,4 +7,6 @@ If you need a web server please read [Building & Testing](#Building&Testing).
 nodejs and npm are required.
 1. run `npm i` in the terminal of the working directory.
 2. run `npm run build` in order to populate the `dist` folder which you can then use for deploying as explained in [Deploying](#Deploying).
-3. if you do not have a web server, you can additionally run `npm run test` which will provide you a web server for testing.
+<br> __mac users__ if the command does not work please run `tsc; vite build`
+4. if you do not have a web server, you can additionally run `npm run test` which will provide you a web server for testing.
+<br> __mac users__ if the command does not work please run `npm run build; npx http-sever dist`
