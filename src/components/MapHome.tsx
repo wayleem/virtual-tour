@@ -20,7 +20,7 @@ function MapHome(props: Props) {
 
   const click = () => {
     animate.start({
-      viewBox: "0 50 2700 900",
+      viewBox: "0 0 5000 700",
       height: "15vh",
 
       transition: {

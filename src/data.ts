@@ -161,8 +161,8 @@ export const Arshamomaque_Preserve: LocationContent = {
     body: "The Ashamomaque Pond Preserve contains a rich assortment of wildlife in its woodlands, open meadows, vernal pools, and tidal wetlands. The preserve has over 2,200 feet of shoreline frontage on Arshamomaque Pond",
     pic: arshamomaque_cover,
     location: {
-        x: 1700,
-        y: 420
+        x: 1880,
+        y: 170
     },
     start: start,
     album: ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg']
@@ -174,8 +174,8 @@ export const DownsFarm_Preserve: LocationContent = {
     body: "The Downs Farm Preserve is a significant natural and historic resource that encompasses a Native American fort site, scenic woodlands, and tidal wetlands. The Downs Farm Preserve is a 51 acre preserve located in the southwest part of the Town of Southold on the North Fork of Long Island.",
     pic: downs_farm_cover,
     location: {
-        x: 1500,
-        y: 500
+        x: 1800,
+        y: 260
     },
     start: meadow,
     album: ['1.jpg', '2.jpg', '3.jpg']
