@@ -217,6 +217,7 @@ style.innerHTML = `
       color: #000;
       text-align: center;
       min-width: 200px;
+      font-size: small;
       padding: 5px 10px;
       margin-left: -110px;
       bottom: calc(100% + 5px);
