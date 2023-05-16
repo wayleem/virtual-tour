@@ -1,30 +1,43 @@
 import { useSelector } from 'react-redux'
-import { PreviewState } from '../types'
+import { Location, PreviewState } from '../types'
 import { NavLink } from 'react-router-dom'
 
-function Preview() {
-    const select = useSelector((state: { previewReducer: PreviewState }) => state.previewReducer.select)
-    return (
-        <>
-            {select !== undefined && (
-                <div className="absolute flex flex-col z-20 top-[10%] left-[5%] w-[30%] h-[80%] bg-stone-50">
-                    <h1 className="relative m-2 font-Jost font-normal text-xl">
-                        {select?.title}
-                    </h1>
-                    <h2 className="relative m-2 font-Jost font-normal text-sm">
-                        {select?.body}
-                    </h2>
-                    <div className="relative m-2 w-[90%] h-[50%] place-self-center">
-                        <img className="relative w-full h-full object-fill" src={select?.pic} />
-                    </div>
+type Props = {
+  selected?: Location
+}
 
+function Preview(props: Props) {
+  const select = useSelector((state: { previewReducer: PreviewState }) => state.previewReducer.select)
 
-                    <NavLink to="/virtualtour" className="relative m-4 place-self-center border-solid border-2 w-[15%] border-black bg-red-500 font-Jost text-xs">
-                        virtual tour
-                    </NavLink>
-                </div>)}
-        </>
-    )
+  const album = () => select?.album.map((a, idx) =>
+    <img key={idx + a} className="object-cover mb-1" src={`/src/assets/locations/${select?.id.replace('_Preserve', '')}/${a}`} />)
+
+  return (
+    <div className="flex h-[100%]">
+      <div className={props.selected ? "bg-sunset/10 flex-auto h-[100%]" : "hidden"}>
+        <img className="absolute w-screen -z-50 h-[330px] object-cover drop-shadow-lg" src={select?.pic} />
+
+        <h1 className="pl-5 pb-1 pt-1 font-Jost font-medium text-xl bg-secondary text-white">
+          {select?.title}
+        </h1>
+
+        <div className="mt-[250px] p-5">
+          <div className="text-sm font-sans mb-6">
+            {select?.body}
+          </div>
+
+          <NavLink to="/virtualtour" className="font-Jost bg-primary pr-2 pt-1 pb-1 pl-2 rounded-lg text-white hover:bg-green/95">
+            Enter Virtual Tour
+          </NavLink>
+
+          <div className="m-5 mt-8">
+            <div className="grid grid-cols-3 gap-2">{album()}</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default Preview
