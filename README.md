@@ -1,15 +1,10 @@
-# Virtual Tour for Group for the East End
+# Deploying
+Everything in the `dist` folder is ready for deployment if you are running a web server. The index.html file will not run if you execute it locally, it needs to be deployed on a web server.
 
-## Steps to test:
+If you need a web server please read [Building & Testing](#Building&Testing).
 
-### 1. clone repository
-
-### 2. open terminal
-
-### 3. run the following in terminal: npm i
-
-### ^ make sure you are in working directory
-
-### 4. run the following in terminal: npm run dev
-
-### 5. go to localhost link
+# Building & Testing
+nodejs and npm are required.
+1. run `npm i` in the terminal of the working directory.
+2. run `npm run build` in order to populate the `dist` folder which you can then use for deploying as explained in [Deploying](#Deploying).
+3. if you do not have a web server, you can additionally run `npm run test` which will provide you a web server for testing.
