@@ -33,7 +33,7 @@ export interface Hotspot {
     pitch: number,
     yaw: number,
     type: string,
-    text: string
+    createTooltipFunc: any
 }
 
 export interface Config {

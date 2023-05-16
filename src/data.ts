@@ -1,6 +1,8 @@
 import arshamomaque_cover from './assets/img/arshamomaque_cover.jpg'
 import downs_farm_cover from './assets/img/downs_farm_cover.jpg'
 import { Panorama, Location, LocationContent } from './types'
+import * as hotspot from './hotspots'
+
 
 export const start: Panorama = {
     name: "start",
@@ -10,15 +12,21 @@ export const start: Panorama = {
         hotSpots: [
             {
                 pitch: 0,
-                yaw: 0,
-                type: 'info',
-                text: 'The Ashamomaque Pond Preserve contains a rich assortment of wildlife in its woodlands, open meadows, vernal pools, and tidal wetlands. The preserve has over 2,200 feet of shoreline frontage on Arshamomaque Pond.'
+                yaw: -50,
+                type: "custom",
+                createTooltipFunc: hotspot.start1
             },
             {
-                pitch: 0,
-                yaw: 100,
-                type: 'info',
-                text: 'test'// add pic of one the birds + sounds
+                pitch: -10,
+                yaw: 70,
+                type: "custom",
+                createTooltipFunc: hotspot.start2
+            },
+            {
+                pitch: 20,
+                yaw: -20,
+                type: "custom",
+                createTooltipFunc: hotspot.start3
             }
         ]
     }
@@ -31,22 +39,16 @@ export const pond: Panorama = {
         panorama: "src/assets/panoramas/GS__0165_04-07-2023_19_36_21.jpeg",
         hotSpots: [
             {
-                pitch: 0,
-                yaw: 100,
-                type: 'info',
-                text: 'One of the species we all hope to see but are relatively elusive, best noted by the scat they leave behind, are river otters (Lontra canadensis). Once prevalent throughout North America, river otters were extirpated from Long Island by the 1800’s. Sometime in the 1990’s a breeding pair returned to the area and Arshamomaque Preserve is on the best preserves on the North Fork to try to spot them.'
+                pitch: 15,
+                yaw: 139,
+                type: "custom",
+                createTooltipFunc: hotspot.pond1
             },
             {
                 pitch: 0,
-                yaw: 0,
-                type: 'info',
-                text: 'test'// add pic of one the fish + sounds (in material folder)
-            },
-            {
-                pitch: 0,
-                yaw: 50,
-                type: 'info',
-                text: 'test' // put sign of otter in east end panorama folder in google drive- taralynn added a few days ago
+                yaw: 180,
+                type: "custom",
+                createTooltipFunc: hotspot.pond2
             }
         ]
     }
@@ -61,21 +63,28 @@ export const obs_tower: Panorama = {
             {
                 pitch: 0,
                 yaw: 0,
-                type: 'info',
-                text: 'From the Old Tower, you have a view of Arshamomaque Swamp, an excellent year-round birding spot. During migration, many species stopover or stay to nest, including Osprey (Pandion haliaetus), Belted Kingfisher (Megaceryle alcyon), Red-Winged Blackbirds (Agelaius phoeniceus) and more.',
+                type: "custom",
+                createTooltipFunc: hotspot.obs1
             },
             {
                 pitch: 0,
-                yaw: 100,
-                type: 'info',
-                text: 'There are some lovely native plants to take note of along the trail to the tower, including sweet pepperbush (Clethra alnifolia), highbush blueberry (Vaccinium corymbosum) and red maple (Acer rubrum).'
+                yaw: 200,
+                type: "custom",
+                createTooltipFunc: hotspot.obs2
             },
             {
                 pitch: 0,
                 yaw: 300,
-                type: 'info',
-                text: 'You can also see the struggle between the invasive reed, phragmites (Phragmites australis) and our native cattails (Typha spp.) from the Tower and along the trail. Phragmites outcompetes and crowds out native plant species and can decrease recreational opportunities in water bodies by forming stands that are almost impossible to penetrate, making it inhospitable for humans and wildlife alike.'
+                type: "custom",
+                createTooltipFunc: hotspot.obs3
+            },
+            {
+                pitch: -5,
+                yaw: 80,
+                type: "custom",
+                createTooltipFunc: hotspot.obs4
             }
+
         ]
     }
 }
@@ -89,21 +98,14 @@ export const vernal_pool: Panorama = {
             {
                 pitch: 0,
                 yaw: 0,
-                type: 'info',
-                text: 'Arshamomaque Preserve is home to many vernal pools, which are temporary to seasonal bodies of water. These vital habitats are home to many species of reptiles and amphibians. They serve as important breeding grounds for vernal pool species, like salamanders and spring peepers. ',
+                type: "custom",
+                createTooltipFunc: hotspot.pool1
             },
             {
                 pitch: 0,
-                yaw: 50,
-                type: 'info',
-                text: 'test'// add pic of the vernal pool sign in google drive folder. taralynn added
-            },
-            {
-                pitch: 0,
-                yaw: 100,
-                type: 'info',
-                text: 'test'
-                // add pic of one the birds + sounds
+                yaw: 60,
+                type: "custom",
+                createTooltipFunc: hotspot.pool2
             }
 
         ]
@@ -119,8 +121,8 @@ export const obs_tower2: Panorama = {
             {
                 pitch: 0,
                 yaw: 200,
-                type: 'info',
-                text: 'The New Tower offers a different vantage point from the Old Tower of Arshamomaque Preserve. View Arshamomaque Swamp from the tower, bring your binoculars or spotting scope. It’s a great place to visit in every season. Good for winter waterfowl spotting and excellent in spring and summer for migrating bird species. '
+                type: "custom",
+                createTooltipFunc: hotspot.obs_1_2
             }
         ]
     }
@@ -132,12 +134,7 @@ export const forest: Panorama = {
     config: {
         panorama: "src/assets/panoramas/GS__0171_04-07-2023_19_31_31.jpeg",
         hotSpots: [
-            {
-                pitch: 0,
-                yaw: 0,
-                type: 'info',
-                text: 'text'
-            }
+
         ]
     }
 }
@@ -151,8 +148,8 @@ export const meadow: Panorama = {
             {
                 pitch: 0,
                 yaw: 0,
-                type: 'info',
-                text: 'The Downs Farm Preserve is a significant natural and historic resource that encompasses a Native American fort site, scenic woodlands, and tidal wetlands. The Downs Farm Preserve is a 51 acre preserve located in the southwest part of the Town of Southold on the North Fork of Long Island.'
+                type: "custom",
+                createTooltipFunc: hotspot.meadow1
             }
         ]
     }
