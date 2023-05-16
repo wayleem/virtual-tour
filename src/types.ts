@@ -19,8 +19,11 @@ export interface LocationContent {
     title: string
     body: string
     pic: string
-    location: string
+    location: {
+        x: number, y: number
+    }
     start: Panorama
+    album: string[]
 }
 
 export interface Panorama {

@@ -158,17 +158,27 @@ export const meadow: Panorama = {
 export const Arshamomaque_Preserve: LocationContent = {
     id: Location.Arshamomaque_Preserve,
     title: "Welcome to Arshamomaque Preserve",
-    body: "placeholder",
+    body: "The Ashamomaque Pond Preserve contains a rich assortment of wildlife in its woodlands, open meadows, vernal pools, and tidal wetlands. The preserve has over 2,200 feet of shoreline frontage on Arshamomaque Pond",
     pic: arshamomaque_cover,
-    location: "absolute top-[17%] left-[73.5%] w-[5%] h-[5%]",
-    start: start
+    location: {
+        x: 1700,
+        y: 420
+    },
+    start: start,
+    album: ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg']
 }
 
 export const DownsFarm_Preserve: LocationContent = {
     id: Location.DownsFarm_Preserve,
     title: "Welcome to Downs Farm Preserve",
-    body: "placeholder",
+    body: "The Downs Farm Preserve is a significant natural and historic resource that encompasses a Native American fort site, scenic woodlands, and tidal wetlands. The Downs Farm Preserve is a 51 acre preserve located in the southwest part of the Town of Southold on the North Fork of Long Island.",
     pic: downs_farm_cover,
-    location: "absolute top-[30%] left-[69%] w-[5%] h-[5%]",
-    start: meadow
+    location: {
+        x: 1500,
+        y: 500
+    },
+    start: meadow,
+    album: ['1.jpg', '2.jpg', '3.jpg']
 }
+
+export const locations = [Arshamomaque_Preserve, DownsFarm_Preserve]
