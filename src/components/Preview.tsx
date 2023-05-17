@@ -54,7 +54,7 @@ function Preview(props: Props) {
               {select?.body}
             </div>
 
-            <NavLink to="/virtualtour" className="font-Jost bg-primary pr-2 pt-1 pb-1 pl-2 rounded-lg text-white hover:bg-green/95">
+            <NavLink to="./virtualtour" className="font-Jost bg-primary pr-2 pt-1 pb-1 pl-2 rounded-lg text-white hover:bg-green/95">
               Enter Virtual Tour
             </NavLink>
           </motion.div>
