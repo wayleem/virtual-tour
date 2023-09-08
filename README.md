@@ -1,3 +1,6 @@
+# Team Website
+https://you.stonybrook.edu/339eastend/technology-assessment/
+
 # Deploying
 Everything in the `dist` folder is ready for deployment if you are running a web server. The index.html file will not run if you execute it locally, it needs to be deployed on a web server.
 
