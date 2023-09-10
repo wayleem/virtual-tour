@@ -1,5 +1,5 @@
 # Group for the East End
-Virtual tour is made for nonprofit organization [Group for the East End](https://www.groupfortheeastend.org/) in a Stony Brook related course. 
+Virtual tour is made for nonprofit organization [Group for the East End](https://www.groupfortheeastend.org/) in a Stony Brook related course. We worked with the client within the semester to deliver this application that they requested to make their hiking trails more accessible.
 
 ## Deploying
 Everything in the `dist` folder is ready for deployment if you are running a web server. The index.html file will not run if you execute it locally, it needs to be deployed on a web server.
