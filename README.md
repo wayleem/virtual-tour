@@ -5,14 +5,17 @@ Virtual tour is made for nonprofit organization [Group for the East End](https:/
 Here are some gifs demonstrating the use of the virtual tour.
 
 ### Hiking trail selection
+There are only two hiking trails for selection. You can see a preview of images of the trail before entering the tour.
 
 <img src="https://github.com/wayleem/virtual-tour/blob/main/assets/virtual-tour-1.gif" width="500" height="500"/>
 
 ### Virtual tour render
+The virtual tour has informative hotspots to click.
 
 <img src="https://github.com/wayleem/virtual-tour/blob/main/assets/virtual-tour-2.gif" width="500" height="500"/>
 
 ### Navigational showcase
+Clicking the map opens up an interface to select a new location on the hiking trail. The selectable areas are marked. You can click the home icon to return back to the trail selection.
 
 <img src="https://github.com/wayleem/virtual-tour/blob/main/assets/virtual-tour-3.gif" width="500" height="500"/>
 
