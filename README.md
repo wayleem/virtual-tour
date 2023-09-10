@@ -1,6 +1,21 @@
 # Group for the East End
 Virtual tour is made for nonprofit organization [Group for the East End](https://www.groupfortheeastend.org/) in a Stony Brook related course. We worked with the client within the semester to deliver this application that they requested to make their hiking trails more accessible.
 
+## Preview
+Here are some gifs demonstrating the use of the virtual tour.
+
+### Hiking trail selection
+
+<img src="https://github.com/wayleem/virtual-tour/blob/main/assets/virtual-tour-1.gif" width="500" height="500"/>
+
+### Virtual tour render
+
+<img src="https://github.com/wayleem/virtual-tour/blob/main/assets/virtual-tour-2.gif" width="500" height="500"/>
+
+### Navigational showcase
+
+<img src="https://github.com/wayleem/virtual-tour/blob/main/assets/virtual-tour-3.gif" width="500" height="500"/>
+
 ## Deploying
 Everything in the `dist` folder is ready for deployment if you are running a web server. The index.html file will not run if you execute it locally, it needs to be deployed on a web server.
 
